@@ -5,5 +5,7 @@ defmodule JsonApiWeb.EmployeeView do
     render_many(employees, __MODULE__, "employee.json")
   end
 
-  def render("employee.json")
+  def render("employee.json", %{employee: employee}) do
+    %{last_name: employee.last_name}
+  end
 end

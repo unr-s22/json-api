@@ -23,7 +23,7 @@ defmodule JsonApiWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", JsonApiWeb do
     pipe_through :api
-    get("/employee", JsonApiWeb.Employees.EmployeeController, :index)
+    get("/employees", EmployeeController, :index)
   end
 
   # Enables LiveDashboard only for development
