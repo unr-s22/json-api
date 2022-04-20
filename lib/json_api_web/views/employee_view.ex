@@ -6,6 +6,10 @@ defmodule JsonApiWeb.EmployeeView do
   end
 
   def render("employee.json", %{employee: employee}) do
-    %{last_name: employee.last_name}
+    %{
+      employee_number: employee.employee_number,
+      last_name: employee.last_name,
+      first_name: employee.first_name
+    }
   end
 end

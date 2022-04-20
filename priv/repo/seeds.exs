@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+employee = %JsonApi.Employees.Employee{
+  last_name: "Potter",
+  first_name: "Gandalf",
+  employee_number: 123
+}
+
+JsonApi.Repo.insert!(employee)
